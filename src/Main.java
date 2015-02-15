@@ -1,12 +1,17 @@
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.util.Scanner;
-import java.net.URL;
-import java.net.URLConnection;
+
+import com.jcraft.jsch.Channel;
+import com.jcraft.jsch.ChannelSftp;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.JSchException;
+import com.jcraft.jsch.Session;
 
 public class Main 
 {
@@ -48,41 +53,57 @@ public class Main
 		}
 	}
 	
-	private static void transferConfig ()
+	private static void transferConfig() 
 	{
-		int BUFFER_SIZE = 4096;
+		JSch jsch = new JSch();
+		Session session = null;
 		
-		String ftpUrl = "ftp://%s:%s@%s/%s;type=i";
-        String host = "roborio-3316.local";
-        String user = "admin";
-        String pass = "";
-        String filePath = "C:/config/configFile.ser";
-        String uploadPath = "/home/lvuser/config/configFile.ser";
- 
-        ftpUrl = String.format(ftpUrl, user, pass, host, uploadPath);
-        
-        try 
-        {
-            URL url = new URL(ftpUrl);
-            URLConnection conn = url.openConnection();
-            OutputStream outputStream = conn.getOutputStream();
-            FileInputStream inputStream = new FileInputStream(filePath);
- 
-            byte[] buffer = new byte[BUFFER_SIZE];
-            int bytesRead = -1;
-            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                outputStream.write(buffer, 0, bytesRead);
-            }
- 
-            inputStream.close();
-            outputStream.close();
- 
-            System.out.println("File uploaded");
-        }
-        catch (IOException ex) 
-        {
-            ex.printStackTrace();
-        }
+		 String host = "roborio-3316.local";
+	     String user = "admin";
+	     String pass = "";
+	     int port = 22;
+	     String filePath = "C:/config/configFile.ser";
+	     String uploadPath = "/home/lvuser/config/configFile.ser";
+		
+		try 
+		{
+			session = jsch.getSession(user, host, port);
+            session.setConfig("StrictHostKeyChecking", "no");
+            session.setPassword(pass);
+            session.connect();
+            
+            Channel channel = session.openChannel("sftp");
+            channel.connect();
+            ChannelSftp sftpChannel = (ChannelSftp) channel;
+            
+			try 
+			{
+				byte[] buffer = new byte[4096];
+				
+				BufferedInputStream bis = new BufferedInputStream (new FileInputStream (filePath));
+				
+				BufferedOutputStream bos = new BufferedOutputStream(sftpChannel.put(uploadPath));
+				
+				int readCount;
+				while( (readCount = bis.read(buffer)) > 0) 
+				{
+					bos.write(buffer, 0, readCount);
+				}
+				bis.close();
+				bos.close();
+	            System.out.println("File uploaded");
+			} 
+			
+			catch (Exception e) 
+			{
+				e.printStackTrace();
+			}
+            
+		}
+		catch (JSchException e) 
+		{
+			e.printStackTrace();
+		}
 	}
 }
 
