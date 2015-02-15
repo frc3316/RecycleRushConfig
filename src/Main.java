@@ -37,8 +37,8 @@ public class Main
 			out = new FileOutputStream("C:/config/configFile.ser");
 			output = new ObjectOutputStream(out);
 			
-			output.writeObject(config.constants);
-			output.writeObject(config.variables);
+			output.writeObject(config.constantsB);
+			output.writeObject(config.variablesB);
 			
 			output.close();
 			out.close();
