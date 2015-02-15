@@ -34,7 +34,18 @@ public class Main
 		
 		try 
 		{
-			out = new FileOutputStream("C:/config/configFile.ser");
+			//Config A writing
+			out = new FileOutputStream("C:/config/configFileA.ser");
+			output = new ObjectOutputStream(out);
+			
+			output.writeObject(config.constantsA);
+			output.writeObject(config.variablesA);
+			
+			output.close();
+			out.close();
+			
+			//Config B writing
+			out = new FileOutputStream("C:/config/configFileB.ser");
 			output = new ObjectOutputStream(out);
 			
 			output.writeObject(config.constantsB);
@@ -62,8 +73,11 @@ public class Main
 	     String user = "admin";
 	     String pass = "";
 	     int port = 22;
-	     String filePath = "C:/config/configFile.ser";
-	     String uploadPath = "/home/lvuser/config/configFile.ser";
+	     String filePathA = "C:/config/configFileA.ser";
+	     String filePathB = "C:/config/configFileB.ser";
+	     
+	     String uploadPathA = "/home/lvuser/config/configFileA.ser";
+	     String uploadPathB = "/home/lvuser/config/configFileB.ser";
 		
 		try 
 		{
@@ -76,19 +90,33 @@ public class Main
             channel.connect();
             ChannelSftp sftpChannel = (ChannelSftp) channel;
             
+            byte[] buffer = new byte[4096];
+			BufferedInputStream bis;
+			BufferedOutputStream bos;
+			int readCount;
+			
 			try 
-			{
-				byte[] buffer = new byte[4096];
+			{	
+				//Config A transferring
+				bis = new BufferedInputStream (new FileInputStream (filePathA));
+				bos = new BufferedOutputStream(sftpChannel.put(uploadPathA));
 				
-				BufferedInputStream bis = new BufferedInputStream (new FileInputStream (filePath));
-				
-				BufferedOutputStream bos = new BufferedOutputStream(sftpChannel.put(uploadPath));
-				
-				int readCount;
 				while( (readCount = bis.read(buffer)) > 0) 
 				{
 					bos.write(buffer, 0, readCount);
 				}
+				bis.close();
+				bos.close();
+				
+				//Config B transferring
+				bis = new BufferedInputStream (new FileInputStream (filePathB));
+			 	bos = new BufferedOutputStream(sftpChannel.put(uploadPathB));
+				
+				while( (readCount = bis.read(buffer)) > 0) 
+				{
+					bos.write(buffer, 0, readCount);
+				}
+				
 				bis.close();
 				bos.close();
 	            System.out.println("File uploaded");

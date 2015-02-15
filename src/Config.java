@@ -1,20 +1,7 @@
 import java.util.Hashtable;
 
 public class Config 
-{
-	public class ConfigException extends Exception
-	{
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-
-		public ConfigException (String key)
-		{
-			super(key);
-		}
-	}
-	
+{	
 	public Hashtable <String, Object> variablesB;
 	public Hashtable <String, Object> constantsB;
 	
@@ -305,10 +292,10 @@ public class Config
 					addToVariables("stacker_MoveStackerToFloor_HeightMax", 0.46);
 					addToVariables("stacker_MoveStackerToFloor_HeightMin", 0.42);
 					//MoveStackerToStep
-					addToVariables("stacker_MoveStackerToStep_HeightMax", 4.1);
-					addToVariables("stacker_MoveStackerToStep_HeightMin", 4.22);
+					addToVariables("stacker_MoveStackerToStep_HeightMax", 4.22);
+					addToVariables("stacker_MoveStackerToStep_HeightMin", 4.1);
 					//MoveStackerToTote
-					addToVariables("stacker_MoveStackerToTote_HeightMax", 15);
-					addToVariables("stacker_MoveStackerToTote_HeightMin", 17);
+					addToVariables("stacker_MoveStackerToTote_HeightMax", 17);
+					addToVariables("stacker_MoveStackerToTote_HeightMin", 15);
 	}
 }
