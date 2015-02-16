@@ -69,15 +69,15 @@ public class Main
 		JSch jsch = new JSch();
 		Session session = null;
 		
-		 String host = "roborio-3316.local";
-	     String user = "admin";
-	     String pass = "";
-	     int port = 22;
-	     String filePathA = "C:/config/configFileA.ser";
-	     String filePathB = "C:/config/configFileB.ser";
-	     
-	     String uploadPathA = "/home/lvuser/config/configFileA.ser";
-	     String uploadPathB = "/home/lvuser/config/configFileB.ser";
+		String host = "roborio-3316.local";
+		String user = "admin";
+		String pass = "";
+		int port = 22;
+		String filePathA = "C:/config/configFileA.ser";
+		String filePathB = "C:/config/configFileB.ser";
+     
+		String uploadPathA = "/home/lvuser/config/configFileA.ser";
+		String uploadPathB = "/home/lvuser/config/configFileB.ser";
 		
 		try 
 		{
