@@ -125,20 +125,54 @@ public class Config
 				 */
 				addToConstants("BUTTON_OPEN_ANSCHLUSS", 8);
 				addToConstants("BUTTON_CLOSE_ANSCHLUSS", 7);
+				
+		/*
+		 * Robot IO
+		 */
+			/*
+			 * Motor Controllers
+			 */
+				/*
+				 * Robot A
+				 */
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
+				
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
+				
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 4);
+				
+				addToConstantsA("ANSCHLUSS_MOTOR_CONTROLLER", 8);
+				
+				addToConstantsA("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
+				addToConstantsA("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+				
+				/*
+				 * Robot B
+				 */
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 6);
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 7);
+				
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
+				
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 5);
+				
+				addToConstantsB("ANSCHLUSS_MOTOR_CONTROLLER", 4);
+				
+				addToConstantsB("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 8);
+				addToConstantsB("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+				
 		/*
 		 * Chassis
 		 */
 			/*
 			 * Constants
 			 */
-			addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 6);
-			addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 7);
 			
-			addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
-			addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
-			
-			addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-			addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 5);
 			
 			addToConstants("CHASSIS_ENCODER_LEFT_A", 4);
 			addToConstants("CHASSIS_ENCODER_LEFT_B", 5);
@@ -204,12 +238,8 @@ public class Config
 			/*
 			 * Constants
 			 */
-			addToConstants("ANSCHLUSS_MOTOR_CONTROLLER", 4);
-			
 			addToConstants("ANSCHLUSS_DIGITAL_INPUT_CLOSED", 11);
 			addToConstants("ANSCHLUSS_DIGITAL_INPUT_OPENED", 10);
-			
-			
 			
 			/*
 			 * Variables
@@ -225,9 +255,6 @@ public class Config
 			 */
 			addToConstants("ROLLER_GRIPPER_GAME_PIECE_IR", 1);
 			addToConstants("ROLLER_GRIPPER_SWITCH_GAME_PIECE", 6);
-			
-			addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 8);
-			addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
 			
 			/*
 			 * Variables
