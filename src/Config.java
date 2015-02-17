@@ -254,7 +254,7 @@ public class Config
 			 * Constants
 			 */
 			addToConstants("ROLLER_GRIPPER_GAME_PIECE_IR", 1);
-			addToConstants("ROLLER_GRIPPER_SWITCH_GAME_PIECE", 7);
+			addToConstants("ROLLER_GRIPPER_SWITCH_GAME_PIECE", 6);
 			
 			/*
 			 * Variables
@@ -291,7 +291,7 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_ChannelX", 0);
 					addToVariables("rollerGripper_RollJoystick_ChannelY", 1);
 					
-					addToVariables("rollerGripper_RollJoystick_InvertX", true);
+					addToVariables("rollerGripper_RollJoystick_InvertX", false);
 					addToVariables("rollerGripper_RollJoystick_InvertY", false);
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
@@ -326,14 +326,14 @@ public class Config
 				//Subsystem
 					
 					//TODO: re-determine these values 
-					addToVariables("stacker_HeightFloorMinimum", 0.4);
-					addToVariables("stacker_HeightFloorMaximum", 0.42);
-					
-					addToVariables("stacker_HeightToteMinimum", 1.45);
-					addToVariables("stacker_HeightToteMaximum", 1.62);
+					addToVariables("stacker_HeightFloorMinimum", 0.373);
+					addToVariables("stacker_HeightFloorMaximum", 0.378);
 					
 					addToVariables("stacker_HeightStepMinimum", 0.95);
 					addToVariables("stacker_HeightStepMaximum", 1.05);
+					
+					addToVariables("stacker_HeightToteMinimum", 1.45);
+					addToVariables("stacker_HeightToteMaximum", 1.62);
 					
 					addToVariables("stacker_HeightStuckOnContainerMinimum", 1.05);
 					addToVariables("stacker_HeightStuckOnContainerMaximum", 1.05);
