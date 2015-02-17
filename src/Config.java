@@ -249,14 +249,14 @@ public class Config
 					/*
 					 * Robot A
 					 */
-					addToVariablesA("rollerGripper_ToteDistanceMinimum", 0.325);
+					addToVariablesA("rollerGripper_ToteDistanceMinimum", 0.32);
 					addToVariablesA("rollerGripper_ToteDistanceMaximum", 0.365);
 					
-					addToVariablesA("rollerGripper_ContainerDistanceMinimum", 0.39);
-					addToVariablesA("rollerGripper_ContainerDistanceMaximum", 0.41);
+					addToVariablesA("rollerGripper_ContainerDistanceMinimum", 0.38);
+					addToVariablesA("rollerGripper_ContainerDistanceMaximum", 0.42);
 					
-					addToVariablesA("rollerGripper_SomethingDistanceThreshold", 0.5);
-					addToVariablesA("rollerGripper_UnsureDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_SomethingDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_UnsureDistanceThreshold", 1.7);
 					
 					/*
 					 * Robot B
@@ -328,14 +328,14 @@ public class Config
 					/*
 					 * Robot A
 					 */
-					addToVariablesA("stacker_HeightFloorMinimum", 0.49);
-					addToVariablesA("stacker_HeightFloorMaximum", 0.52);
+					addToVariablesA("stacker_HeightFloorMinimum", 0.0);
+					addToVariablesA("stacker_HeightFloorMaximum", 0.6);
 					
-					addToVariablesA("stacker_HeightStepMinimum", 1.8);
-					addToVariablesA("stacker_HeightStepMaximum", 2.25);
+					addToVariablesA("stacker_HeightStepMinimum", 2.0);
+					addToVariablesA("stacker_HeightStepMaximum", 2.8);
 
-					addToVariablesA("stacker_HeightToteMinimum", 4.9);
-					addToVariablesA("stacker_HeightToteMaximum", 7.1);
+					addToVariablesA("stacker_HeightToteMinimum", 7.0);
+					addToVariablesA("stacker_HeightToteMaximum", 20.0);
 					
 					/*
 					 * Robot B
