@@ -141,8 +141,7 @@ public class Config
 				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
 				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 4);
+				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
 				addToConstantsA("ANSCHLUSS_MOTOR_CONTROLLER", 8);
 				
@@ -158,8 +157,7 @@ public class Config
 				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
 				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 5);
+				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER", 0);
 				
 				addToConstantsB("ANSCHLUSS_MOTOR_CONTROLLER", 4);
 				
@@ -266,14 +264,30 @@ public class Config
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
 					
-					addToVariables("rollerGripper_ToteDistanceMinimum", 0.325);
-					addToVariables("rollerGripper_ToteDistanceMaximum", 0.36);
+					//TODO: re-determine distances
+					/*
+					 * Robot A
+					 */
+					addToVariablesA("rollerGripper_ToteDistanceMinimum", 0.325);
+					addToVariablesA("rollerGripper_ToteDistanceMaximum", 0.365);
 					
-					addToVariables("rollerGripper_ContainerDistanceMinimum", 0.39);
-					addToVariables("rollerGripper_ContainerDistanceMaximum", 0.41);
+					addToVariablesA("rollerGripper_ContainerDistanceMinimum", 0.39);
+					addToVariablesA("rollerGripper_ContainerDistanceMaximum", 0.41);
 					
-					addToVariables("rollerGripper_SomethingDistanceThreshold", 0.5);
-					addToVariables("rollerGripper_UnsureDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_SomethingDistanceThreshold", 0.5);
+					addToVariablesA("rollerGripper_UnsureDistanceThreshold", 1.0);
+					
+					/*
+					 * Robot B
+					 */
+					addToVariablesB("rollerGripper_ToteDistanceMinimum", 0.325);
+					addToVariablesB("rollerGripper_ToteDistanceMaximum", 0.365);
+					
+					addToVariablesB("rollerGripper_ContainerDistanceMinimum", 0.39);
+					addToVariablesB("rollerGripper_ContainerDistanceMaximum", 0.41);
+					
+					addToVariablesB("rollerGripper_SomethingDistanceThreshold", 0.5);
+					addToVariablesB("rollerGripper_UnsureDistanceThreshold", 1.0);
 					
 				//RollIn
 					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
