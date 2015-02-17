@@ -236,7 +236,7 @@ public class Config
 			 * Constants
 			 */
 			addToConstants("ROLLER_GRIPPER_GAME_PIECE_IR", 1);
-			addToConstants("ROLLER_GRIPPER_SWITCH_GAME_PIECE", 7);
+			addToConstants("ROLLER_GRIPPER_SWITCH_GAME_PIECE", 6);
 			
 			/*
 			 * Variables
@@ -264,7 +264,7 @@ public class Config
 					addToVariablesB("rollerGripper_ToteDistanceMinimum", 0.325);
 					addToVariablesB("rollerGripper_ToteDistanceMaximum", 0.365);
 					
-					addToVariablesB("rollerGripper_ContainerDistanceMinimum", 0.39);
+					addToVariablesB("rollerGripper_ContainerDistanceMinimum", 0.38);
 					addToVariablesB("rollerGripper_ContainerDistanceMaximum", 0.41);
 					
 					addToVariablesB("rollerGripper_SomethingDistanceThreshold", 0.5);
@@ -290,7 +290,7 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_ChannelX", 0);
 					addToVariables("rollerGripper_RollJoystick_ChannelY", 1);
 					
-					addToVariables("rollerGripper_RollJoystick_InvertX", true);
+					addToVariables("rollerGripper_RollJoystick_InvertX", false);
 					addToVariables("rollerGripper_RollJoystick_InvertY", false);
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
@@ -328,14 +328,14 @@ public class Config
 					/*
 					 * Robot A
 					 */
-					addToVariablesA("stacker_HeightFloorMinimum", 0.4);
-					addToVariablesA("stacker_HeightFloorMaximum", 0.42);
+					addToVariablesA("stacker_HeightFloorMinimum", 0.49);
+					addToVariablesA("stacker_HeightFloorMaximum", 0.52);
 					
-					addToVariablesA("stacker_HeightToteMinimum", 1.45);
-					addToVariablesA("stacker_HeightToteMaximum", 1.62);
-					
-					addToVariablesA("stacker_HeightStepMinimum", 0.95);
-					addToVariablesA("stacker_HeightStepMaximum", 1.05);
+					addToVariablesA("stacker_HeightStepMinimum", 1.8);
+					addToVariablesA("stacker_HeightStepMaximum", 2.25);
+
+					addToVariablesA("stacker_HeightToteMinimum", 4.9);
+					addToVariablesA("stacker_HeightToteMaximum", 7.1);
 					
 					/*
 					 * Robot B
@@ -343,10 +343,10 @@ public class Config
 					addToVariablesB("stacker_HeightFloorMinimum", 0.4);
 					addToVariablesB("stacker_HeightFloorMaximum", 0.42);
 					
-					addToVariablesB("stacker_HeightToteMinimum", 1.45);
-					addToVariablesB("stacker_HeightToteMaximum", 1.62);
-					
 					addToVariablesB("stacker_HeightStepMinimum", 0.95);
 					addToVariablesB("stacker_HeightStepMaximum", 1.05);
+
+					addToVariablesB("stacker_HeightToteMinimum", 1.45);
+					addToVariablesB("stacker_HeightToteMaximum", 1.62);
 	}
 }
