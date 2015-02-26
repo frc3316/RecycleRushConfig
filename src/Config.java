@@ -201,6 +201,18 @@ public class Config
 			//RobotOrientedDrive
 			addToVariables("chassis_RobotOrientedDrive_TurnScale", 1.0);
 			
+			//RobotOrientedDrivePIDRotation
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KP", 0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KI", 0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KD", 0);
+			
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_AbsoluteTolerance", 5);
+			
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MinimumOutput", -1);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MaximumOutput", 1);
+			
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 180);
+			
 			//RobotOrientedNavigation
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP", 0.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI", 0.0);
