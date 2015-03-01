@@ -25,6 +25,8 @@ public class Main
 		
 		writeConfig();
 		transferConfig();
+		
+		System.exit(0);
 	}
 	
 	private static void writeConfig ()
@@ -132,6 +134,7 @@ public class Main
 		{
 			e.printStackTrace();
 		}
+		
 	}
 }
 

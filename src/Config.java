@@ -177,9 +177,13 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_CENTER_A", 0);
 			addToConstants("CHASSIS_ENCODER_CENTER_B", 1);
 			
-			addToConstants("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", -((6*Math.PI) / 32) * 0.0254);
+			addToConstants("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstants("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstants("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
+			
+			addToConstants("CHASSIS_ENCODER_LEFT_REVERSE_DIRECTION", false);
+			addToConstants("CHASSIS_ENCODER_RIGHT_REVERSE_DIRECTION", true);
+			addToConstants("CHASSIS_ENCODER_CENTER_REVERSE_DIRECTION", true);
 			
 			addToConstants("CHASSIS_WIDTH", 0.5322); //in meters
 			/*
@@ -320,15 +324,14 @@ public class Config
 			/*
 			 * Variables
 			 */
-				//MoveStacker
-					//MoveStackerToFloor
-					addToVariables("stacker_MoveStackerToFloor_HeightMax", 0.405);
-					addToVariables("stacker_MoveStackerToFloor_HeightMin", 0.39);
-					//MoveStackerToStep
-					addToVariables("stacker_MoveStackerToStep_HeightMax", 4.22);
-					addToVariables("stacker_MoveStackerToStep_HeightMin", 4.1);
-					//MoveStackerToTote
-					addToVariables("stacker_MoveStackerToTote_HeightMax", 8.5);
-					addToVariables("stacker_MoveStackerToTote_HeightMin", 8);
+					//Subsystem
+					addToVariables("stacker_HeightFloorMinimum", 0.405);
+					addToVariables("stacker_HeightFloorMaximum", 0.39);
+
+					addToVariables("stacker_HeightStepMinimum", 4.22);
+					addToVariables("stacker_HeightStepMaximum", 4.1);
+
+					addToVariables("stacker_HeightToteMinimum", 8.5);
+					addToVariables("stacker_HeightToteMaximum", 8);
 	}
 }
