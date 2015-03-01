@@ -177,9 +177,19 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_CENTER_A", 0);
 			addToConstants("CHASSIS_ENCODER_CENTER_B", 1);
 			
-			addToConstants("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
-			addToConstants("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
-			addToConstants("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
+			/*
+			 * Robot A
+			 */
+			addToConstantsA("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 256) * 0.0254);
+			addToConstantsA("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 256) * 0.0254);
+			addToConstantsA("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
+			
+			/*
+			 * Robot B
+			 */
+			addToConstantsB("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
+			addToConstantsB("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
+			addToConstantsB("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
 			
 			addToConstants("CHASSIS_ENCODER_LEFT_REVERSE_DIRECTION", false);
 			addToConstants("CHASSIS_ENCODER_RIGHT_REVERSE_DIRECTION", true);
@@ -206,16 +216,16 @@ public class Config
 			addToVariables("chassis_RobotOrientedDrive_TurnScale", 1.0);
 			
 			//RobotOrientedDrivePIDRotation
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KP", 0);
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KI", 0);
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KD", 0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KP", 0.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KI", 0.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KD", 0.0);
 			
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_AbsoluteTolerance", 5);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_AbsoluteTolerance", 5.0);
 			
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MinimumOutput", -1);
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MaximumOutput", 1);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MinimumOutput", -1.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MaximumOutput", 1.0);
 			
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 180);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 180.0);
 			
 			//RobotOrientedNavigation
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP", 0.0);
