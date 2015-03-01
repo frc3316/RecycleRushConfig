@@ -131,39 +131,18 @@ public class Config
 			/*
 			 * Motor Controllers
 			 */
-				/*
-				 * Robot A
-				 */
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
 				
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 4);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
-				addToConstantsA("ANSCHLUSS_MOTOR_CONTROLLER", 8);
+				addToConstants("ANSCHLUSS_MOTOR_CONTROLLER", 8);
 				
-				addToConstantsA("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
-				addToConstantsA("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
-				
-				/*
-				 * Robot B
-				 */
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 6);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 7);
-				
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
-				
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 5);
-				
-				addToConstantsB("ANSCHLUSS_MOTOR_CONTROLLER", 4);
-				
-				addToConstantsB("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 8);
-				addToConstantsB("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
+				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
 				
 		/*
 		 * Chassis
@@ -191,8 +170,8 @@ public class Config
 			addToConstantsB("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstantsB("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
 			
-			addToConstants("CHASSIS_ENCODER_LEFT_REVERSE_DIRECTION", false);
-			addToConstants("CHASSIS_ENCODER_RIGHT_REVERSE_DIRECTION", true);
+			addToConstants("CHASSIS_ENCODER_LEFT_REVERSE_DIRECTION", true);
+			addToConstants("CHASSIS_ENCODER_RIGHT_REVERSE_DIRECTION", false);
 			addToConstants("CHASSIS_ENCODER_CENTER_REVERSE_DIRECTION", true);
 			
 			addToConstants("CHASSIS_WIDTH", 0.5322); //in meters
@@ -282,6 +261,16 @@ public class Config
 				//Subsystem
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
+					
+					addToVariables("rollerGripper_ToteDistanceMinimum", 0.0);
+					addToVariables("rollerGripper_ToteDistanceMaximum", 0.326);
+					
+					addToVariables("rollerGripper_ContainerDistanceMinimum", 0.327);
+					addToVariables("rollerGripper_ContainerDistanceMaximum", 0.4);
+					
+					addToVariables("rollerGripper_SomethingDistanceThreshold", 0.5);
+					addToVariables("rollerGripper_UnsureDistanceThreshold", 1.0);
+					
 				//RollIn
 					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
 					addToVariables("rollerGripper_RollIn_SpeedRight", 1.0);
@@ -342,6 +331,6 @@ public class Config
 					addToVariables("stacker_HeightStepMaximum", 4.1);
 
 					addToVariables("stacker_HeightToteMinimum", 8.5);
-					addToVariables("stacker_HeightToteMaximum", 8);
+					addToVariables("stacker_HeightToteMaximum", 8.0);
 	}
 }
