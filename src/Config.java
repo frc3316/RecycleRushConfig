@@ -256,6 +256,9 @@ public class Config
 				//Subsystem
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
+					
+					addToVariables("rollerGripper_GPDistanceAverage_Size", 20);
+					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 20);
 				//RollIn
 					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
 					addToVariables("rollerGripper_RollIn_SpeedRight", 1.0);
@@ -308,6 +311,9 @@ public class Config
 			/*
 			 * Variables
 			 */
+				//Subsystem
+					addToVariables("stacker_HeightAverage_Size", 25);
+					addToVariables("stacker_HeightAverage_UpdateRate", 20);
 				//MoveStacker
 					//MoveStackerToFloor
 					addToVariables("stacker_MoveStackerToFloor_HeightMax", 0.405);
