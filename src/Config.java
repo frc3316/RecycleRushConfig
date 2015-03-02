@@ -131,39 +131,18 @@ public class Config
 			/*
 			 * Motor Controllers
 			 */
-				/*
-				 * Robot A
-				 */
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
 				
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-				addToConstantsA("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 4);
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
-				addToConstantsA("ANSCHLUSS_MOTOR_CONTROLLER", 8);
+				addToConstants("ANSCHLUSS_MOTOR_CONTROLLER", 8);
 				
-				addToConstantsA("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
-				addToConstantsA("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
-				
-				/*
-				 * Robot B
-				 */
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 6);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 7);
-				
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
-				
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_1", 0);
-				addToConstantsB("CHASSIS_MOTOR_CONTROLLER_CENTER_2", 5);
-				
-				addToConstantsB("ANSCHLUSS_MOTOR_CONTROLLER", 4);
-				
-				addToConstantsB("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 8);
-				addToConstantsB("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
+				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
 				
 		/*
 		 * Chassis
@@ -177,9 +156,9 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_CENTER_A", 0);
 			addToConstants("CHASSIS_ENCODER_CENTER_B", 1);
 			
-			addToConstants("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", -0.0018702293765902);
-			addToConstants("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", 0.0018702293765902);
-			addToConstants("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", 0.0012468195843934);
+			addToConstants("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", 0.0018702293765902);
+			addToConstants("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", -0.0018702293765902);
+			addToConstants("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", 0.0099745566751476);
 			
 			addToConstants("CHASSIS_WIDTH", 0.5322); //in meters
 			/*
@@ -226,6 +205,9 @@ public class Config
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MinimumOutput", -1.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput", 1.0);
+			
+			//Dropoff Sequence
+			addToVariables("chassis_DropoffSequence_BackwardsDistance", -0.5);
 		/*
 		 * Anschluss
 		 */
@@ -257,13 +239,30 @@ public class Config
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
 					
-					addToVariables("rollerGripper_ToteDistanceMinimum", 0.325);
-					addToVariables("rollerGripper_ToteDistanceMaximum", 0.36);
+					//TODO: re-determine distances
+					/*
+					 * Robot A
+					 */
+					addToVariablesA("rollerGripper_ToteDistanceMinimum", 0.32);
+					addToVariablesA("rollerGripper_ToteDistanceMaximum", 0.365);
 					
-					addToVariables("rollerGripper_ContainerDistanceMinimum", 0.39);
-					addToVariables("rollerGripper_ContainerDistanceMaximum", 0.41);
+					addToVariablesA("rollerGripper_ContainerDistanceMinimum", 0.38);
+					addToVariablesA("rollerGripper_ContainerDistanceMaximum", 0.42);
 					
-					addToVariables("rollerGripper_GamePieceDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_SomethingDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_UnsureDistanceThreshold", 1.7);
+					
+					/*
+					 * Robot B
+					 */
+					addToVariablesB("rollerGripper_ToteDistanceMinimum", 0.32);
+					addToVariablesB("rollerGripper_ToteDistanceMaximum", 0.365);
+					
+					addToVariablesB("rollerGripper_ContainerDistanceMinimum", 0.38);
+					addToVariablesB("rollerGripper_ContainerDistanceMaximum", 0.42);
+					
+					addToVariablesB("rollerGripper_SomethingDistanceThreshold", 0.9);
+					addToVariablesB("rollerGripper_UnsureDistanceThreshold", 1.4);
 					
 				//RollIn
 					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
@@ -318,18 +317,28 @@ public class Config
 			 * Variables
 			 */
 				//Subsystem
+					/*
+					 * Robot A
+					 */
+					addToVariablesA("stacker_HeightFloorMinimum", 0.0);
+					addToVariablesA("stacker_HeightFloorMaximum", 0.6);
 					
-					//TODO: re-determine these values 
-					addToVariables("stacker_HeightFloorMinimum", 0.373);
-					addToVariables("stacker_HeightFloorMaximum", 0.378);
+					addToVariablesA("stacker_HeightStepMinimum", 2.0);
+					addToVariablesA("stacker_HeightStepMaximum", 2.8);
+
+					addToVariablesA("stacker_HeightToteMinimum", 5.0);
+					addToVariablesA("stacker_HeightToteMaximum", 20.0);
 					
-					addToVariables("stacker_HeightStepMinimum", 0.95);
-					addToVariables("stacker_HeightStepMaximum", 1.05);
+					/*
+					 * Robot B
+					 */
+					addToVariablesB("stacker_HeightFloorMinimum", 0.0);
+					addToVariablesB("stacker_HeightFloorMaximum", 1.49);
 					
-					addToVariables("stacker_HeightToteMinimum", 1.45);
-					addToVariables("stacker_HeightToteMaximum", 1.62);
-					
-					addToVariables("stacker_HeightStuckOnContainerMinimum", 1.05);
-					addToVariables("stacker_HeightStuckOnContainerMaximum", 1.05);
+					addToVariablesB("stacker_HeightStepMinimum", 1.49);
+					addToVariablesB("stacker_HeightStepMaximum", 4.5);
+
+					addToVariablesB("stacker_HeightToteMinimum", 4.5);
+					addToVariablesB("stacker_HeightToteMaximum", 20.0);
 	}
 }
