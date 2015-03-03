@@ -170,6 +170,7 @@ public class Config
 			addToConstantsB("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstantsB("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
 			
+			
 			addToConstants("CHASSIS_ENCODER_LEFT_REVERSE_DIRECTION", true);
 			addToConstants("CHASSIS_ENCODER_RIGHT_REVERSE_DIRECTION", false);
 			addToConstants("CHASSIS_ENCODER_CENTER_REVERSE_DIRECTION", true);
@@ -231,6 +232,10 @@ public class Config
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MinimumOutput", -1.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput", 1.0);
+			
+			addToVariables("chassis_CenterEncoderScale", 4.0);
+			addToVariables("chassis_LeftEncoderScale", 4.0);
+			addToVariables("chassis_RightEncoderScale", 4.0);
 		/*
 		 * Anschluss
 		 */
@@ -296,6 +301,9 @@ public class Config
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
 					
+					addToVariables("rollerGripper_GPDistanceAverage_Size", 100);
+					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 1000);
+					
 		/*
 		 * Stacker
 		 */
@@ -319,6 +327,9 @@ public class Config
 					
 					addToConstants("SWITCH_RATCHET_RIGHT", 8);
 					addToConstants("SWITCH_RATCHET_LEFT", 7);
+					
+					addToVariables("stacker_HeightAverage_Size", 100);
+					addToVariables("stacker_HeightAverage_UpdateRate", 1000);
 					
 			/*
 			 * Variables
