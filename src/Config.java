@@ -187,6 +187,15 @@ public class Config
 			
 			addToVariables("chassis_HeadingToSet", 0.0); // This is the heading that the SetHeadingSDB command sets to
 														 // It is configurable in the SDB (it should appear in initSDB())
+			
+			addToVariables("chassis_AccelXAverage_Size", 20);
+			addToVariables("chassis_AccelXAverage_UpdateRate", 10);
+			
+			addToVariables("chassis_AccelYAverage_Size", 20);
+			addToVariables("chassis_AccelYAverage_UpdateRate", 10);
+			
+			addToVariables("chassis_AccelLowPass", 0.0);
+			
 			//TankDrive
 			addToVariables("chassis_TankDrive_InvertX", false);
 			addToVariables("chassis_TankDrive_InvertY", true);
@@ -208,6 +217,8 @@ public class Config
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 180.0);
 			
 			//RobotOrientedNavigation
+			
+			//PID variables are scaled x1000 for changeability through the SmartDashboard 
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP", 300.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI", 5.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD", 1.5);
@@ -276,6 +287,9 @@ public class Config
 					addToVariables("rollerGripper_SomethingDistanceThreshold", 0.5);
 					addToVariables("rollerGripper_UnsureDistanceThreshold", 1.0);
 					
+					addToVariables("rollerGripper_GPDistanceAverage_Size", 100);
+					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 1000);
+					
 				//RollIn
 					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
 					addToVariables("rollerGripper_RollIn_SpeedRight", 1.0);
@@ -300,9 +314,6 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_InvertY", false);
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
-					
-					addToVariables("rollerGripper_GPDistanceAverage_Size", 100);
-					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 1000);
 					
 		/*
 		 * Stacker
