@@ -104,7 +104,7 @@ public class Config
 				 */
 				addToConstants("BUTTON_MOVE_STACKER_TO_FLOOR", 1);
 				addToConstants("BUTTON_MOVE_STACKER_TO_STEP", 2);
-				addToConstants("BUTTON_PICKUP", 3);
+				addToConstants("BUTTON_TOTE_PICKUP", 3);
 				addToConstants("BUTTON_MOVE_STACKER_TO_TOTE", 4);
 				
 				addToConstants("BUTTON_HOLD_CONTAINER", 10);
