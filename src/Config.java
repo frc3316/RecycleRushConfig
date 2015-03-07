@@ -251,8 +251,6 @@ public class Config
 				//Subsystem
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
-					addToVariables("RollerGripper_Auto_Roll_In_Motor_Speed_Left", 1.0);
-					addToVariables("RollerGripper_Auto_Roll_In_Motor_Speed_Right", 1.0);
 					addToVariables("rollerGripper_GPDistanceAverage_Size", 20);
 					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 20);
 					//TODO: re-determine distances
@@ -280,21 +278,10 @@ public class Config
 					addToVariablesB("rollerGripper_SomethingDistanceThreshold", 1.0);
 					addToVariablesB("rollerGripper_UnsureDistanceThreshold", 1.7);
 					
-				//RollIn
-					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
-					addToVariables("rollerGripper_RollIn_SpeedRight", 1.0);
-			
-				//RollOut
-					addToVariables("rollerGripper_RollOut_SpeedLeft", -1.0);
-					addToVariables("rollerGripper_RollOut_SpeedRight", -1.0);
-			
-				//RollTurnClockwise
-					addToVariables("rollerGripper_RollTurnClockwise_SpeedLeft", -1.0);
-					addToVariables("rollerGripper_RollTurnClockwise_SpeedRight", 1.0);
-			
-				//RollTurnCounterClockwise
-					addToVariables("rollerGripper_RollTurnCounterClockwise_SpeedLeft", 1.0);
-					addToVariables("rollerGripper_RollTurnCounterClockwise_SpeedRight", -1.0);
+				//AutoRollIn
+					addToVariables("rollerGripper_AutoRollIn_Left", 1.0);
+					addToVariables("rollerGripper_AutoRollIn_Right", 1.0);
+					addToVariables("rollerGripper_AutoRollIn_MaxFinishCounter", 20);
 					
 				//RollJoystick
 					addToVariables("rollerGripper_RollJoystick_ChannelX", 0);
@@ -304,6 +291,9 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_InvertY", false);
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
+					
+				//WaitForTote
+					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 20);
 					
 		/*
 		 * Stacker
