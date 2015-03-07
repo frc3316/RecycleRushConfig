@@ -251,7 +251,8 @@ public class Config
 				//Subsystem
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
-					
+					addToVariables("RollerGripper_Auto_Roll_In_Motor_Speed_Left", 1.0);
+					addToVariables("RollerGripper_Auto_Roll_In_Motor_Speed_Right", 1.0);
 					addToVariables("rollerGripper_GPDistanceAverage_Size", 20);
 					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 20);
 					//TODO: re-determine distances
