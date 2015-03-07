@@ -185,6 +185,10 @@ public class Config
 			addToVariables("chassis_RightScale", -1.0);
 			addToVariables("chassis_CenterScale", 1.0);
 			
+			addToVariables("chassis_CenterEncoderScale", 4.0);
+			addToVariables("chassis_LeftEncoderScale", 4.0);
+			addToVariables("chassis_RightEncoderScale", 4.0);
+			
 			addToVariables("chassis_HeadingToSet", 0.0); // This is the heading that the SetHeadingSDB command sets to
 														 // It is configurable in the SDB (it should appear in initSDB())
 			//TankDrive
@@ -208,34 +212,62 @@ public class Config
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 180.0);
 			
 			//RobotOrientedNavigation
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP", 300.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI", 5.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD", 1.5);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP", 750.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI", 2.000);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD", 0.07);
+			//Set 1
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP_1", 300.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI_1", 2.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD_1", 2.0);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP", 15.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI", 0.05);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD", 0.015);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_1", 300.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_1", 2.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_1", 2.0);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance", 0.15);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance", 0.10);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance", 5.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_1", 13.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_1", 0.4);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_1", 0.04);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MinimumOutput", -0.75);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MaximumOutput", 0.75);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance_1", 0.15);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_1", 0.10);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance_1", 1.0);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MinimumOutput", -0.75);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MaximumOutput", 0.75);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MinimumOutput_1", -0.6);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MaximumOutput_1", 0.6);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MinimumOutput", -1.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput", 1.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MinimumOutput_1", -0.6);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MaximumOutput_1", 0.6);
 			
-			addToVariables("chassis_CenterEncoderScale", 4.0);
-			addToVariables("chassis_LeftEncoderScale", 4.0);
-			addToVariables("chassis_RightEncoderScale", 4.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MinimumOutput_1", -0.5);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput_1", 0.5);
+			
+			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_1", 5);
+			
+			//Set 2
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP_2", 300.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI_2", 2.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD_2", 2.0);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_2", 300.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_2", 2.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_2", 2.0);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_2", 13.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_2", 0.2);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_2", 0.02);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance_2", 0.15);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_2", 0.10);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance_2", 5.0);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MinimumOutput_2", -0.6);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MaximumOutput_2", 0.6);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MinimumOutput_2", -0.6);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MaximumOutput_2", 0.6);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MinimumOutput_2", -0.5);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput_2", 0.5);
+			
+			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_2", 5);
 		/*
 		 * Anschluss
 		 */
