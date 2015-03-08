@@ -104,6 +104,7 @@ public class Config
 				 */
 				addToConstants("BUTTON_MOVE_STACKER_TO_FLOOR", 1);
 				addToConstants("BUTTON_MOVE_STACKER_TO_STEP", 2);
+				addToConstants("BUTTON_TOTE_PICKUP", 3);
 				addToConstants("BUTTON_MOVE_STACKER_TO_TOTE", 4);
 				
 				addToConstants("BUTTON_HOLD_CONTAINER", 10);
@@ -150,6 +151,7 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_LEFT_A", 4);
 			addToConstants("CHASSIS_ENCODER_LEFT_B", 5);
 			
+			
 			addToConstants("CHASSIS_ENCODER_RIGHT_A", 2);
 			addToConstants("CHASSIS_ENCODER_RIGHT_B", 3);
 			
@@ -169,7 +171,6 @@ public class Config
 			addToConstantsB("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstantsB("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstantsB("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
-			
 			
 			addToConstants("CHASSIS_ENCODER_LEFT_REVERSE_DIRECTION", true);
 			addToConstants("CHASSIS_ENCODER_RIGHT_REVERSE_DIRECTION", false);
@@ -355,30 +356,36 @@ public class Config
 					addToVariables("rollerGripper_LeftScale", 1.0);
 					addToVariables("rollerGripper_RightScale", -1.0);
 					
-					addToVariables("rollerGripper_ToteDistanceMinimum", 0.0);
-					addToVariables("rollerGripper_ToteDistanceMaximum", 0.326);
+					addToVariables("rollerGripper_GPDistanceAverage_Size", 20);
+					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 20);
+					/*
+					 * Robot A
+					 */
+					addToVariablesA("rollerGripper_ToteDistanceMinimum", 0.32);
+					addToVariablesA("rollerGripper_ToteDistanceMaximum", 0.365);
 					
-					addToVariables("rollerGripper_ContainerDistanceMinimum", 0.327);
-					addToVariables("rollerGripper_ContainerDistanceMaximum", 0.4);
+					addToVariablesA("rollerGripper_ContainerDistanceMinimum", 0.38);
+					addToVariablesA("rollerGripper_ContainerDistanceMaximum", 0.42);
 					
-					addToVariables("rollerGripper_SomethingDistanceThreshold", 0.5);
-					addToVariables("rollerGripper_UnsureDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_SomethingDistanceThreshold", 1.0);
+					addToVariablesA("rollerGripper_UnsureDistanceThreshold", 1.7);
 					
-				//RollIn
-					addToVariables("rollerGripper_RollIn_SpeedLeft", 1.0);
-					addToVariables("rollerGripper_RollIn_SpeedRight", 1.0);
-			
-				//RollOut
-					addToVariables("rollerGripper_RollOut_SpeedLeft", -1.0);
-					addToVariables("rollerGripper_RollOut_SpeedRight", -1.0);
-			
-				//RollTurnClockwise
-					addToVariables("rollerGripper_RollTurnClockwise_SpeedLeft", -1.0);
-					addToVariables("rollerGripper_RollTurnClockwise_SpeedRight", 1.0);
-			
-				//RollTurnCounterClockwise
-					addToVariables("rollerGripper_RollTurnCounterClockwise_SpeedLeft", 1.0);
-					addToVariables("rollerGripper_RollTurnCounterClockwise_SpeedRight", -1.0);
+					/*
+					 * Robot B
+					 */
+					addToVariablesB("rollerGripper_ToteDistanceMinimum", 0.0);
+					addToVariablesB("rollerGripper_ToteDistanceMaximum", 0.33);
+					
+					addToVariablesB("rollerGripper_ContainerDistanceMinimum", 0.35);
+					addToVariablesB("rollerGripper_ContainerDistanceMaximum", 0.42);
+					
+					addToVariablesB("rollerGripper_SomethingDistanceThreshold", 1.0);
+					addToVariablesB("rollerGripper_UnsureDistanceThreshold", 1.7);
+					
+				//AutoRollIn
+					addToVariables("rollerGripper_AutoRollIn_Left", 1.0);
+					addToVariables("rollerGripper_AutoRollIn_Right", 1.0);
+					addToVariables("rollerGripper_AutoRollIn_MaxFinishCounter", 20);
 					
 				//RollJoystick
 					addToVariables("rollerGripper_RollJoystick_ChannelX", 0);
@@ -389,8 +396,8 @@ public class Config
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
 					
-					addToVariables("rollerGripper_GPDistanceAverage_Size", 100);
-					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 1000);
+				//WaitForTote
+					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 20);
 					
 		/*
 		 * Stacker
@@ -413,23 +420,37 @@ public class Config
 					
 					addToConstants("STACKER_IR", 0);
 					
-					addToConstants("SWITCH_RATCHET_RIGHT", 8);
 					addToConstants("SWITCH_RATCHET_LEFT", 7);
-					
-					addToVariables("stacker_HeightAverage_Size", 100);
-					addToVariables("stacker_HeightAverage_UpdateRate", 1000);
-					
+					addToConstants("SWITCH_RATCHET_RIGHT", 8);
 			/*
 			 * Variables
 			 */
-					//Subsystem
-					addToVariables("stacker_HeightFloorMinimum", 0.405);
-					addToVariables("stacker_HeightFloorMaximum", 0.39);
+				//Subsystem
+					addToVariables("stacker_HeightAverage_Size", 25);
+					addToVariables("stacker_HeightAverage_UpdateRate", 20);
+					
+					/*
+					 * Robot A
+					 */
+					addToVariablesA("stacker_HeightFloorMinimum", 0.0);
+					addToVariablesA("stacker_HeightFloorMaximum", 0.6);
+					
+					addToVariablesA("stacker_HeightStepMinimum", 2.0);
+					addToVariablesA("stacker_HeightStepMaximum", 2.8);
 
-					addToVariables("stacker_HeightStepMinimum", 4.22);
-					addToVariables("stacker_HeightStepMaximum", 4.1);
+					addToVariablesA("stacker_HeightToteMinimum", 5.0);
+					addToVariablesA("stacker_HeightToteMaximum", 20.0);
+					
+					/*
+					 * Robot B
+					 */
+					addToVariablesB("stacker_HeightFloorMinimum", 0.0);
+					addToVariablesB("stacker_HeightFloorMaximum", 0.63);
+					
+					addToVariablesB("stacker_HeightStepMinimum", 3.75);
+					addToVariablesB("stacker_HeightStepMaximum", 4.2);
 
-					addToVariables("stacker_HeightToteMinimum", 8.5);
-					addToVariables("stacker_HeightToteMaximum", 8.0);
+					addToVariablesB("stacker_HeightToteMinimum", 5.5);
+					addToVariablesB("stacker_HeightToteMaximum", 20.0);
 	}
 }
