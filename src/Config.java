@@ -219,7 +219,7 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI_1", 2.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD_1", 2.0);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_1", 3000.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_1", 500.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_1", 2.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_1", 2.0);
 			
@@ -228,7 +228,7 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_1", 0.1);
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance_1", 0.15);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_1", 0.05);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_1", 0.20);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance_1", 1.0);
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MinimumOutput_1", -0.6);
@@ -251,9 +251,9 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_2", 2.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_2", 2.0);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_2", 4.4);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_2", 0.048);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_2", 0.8);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_2", 3.8);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_2", 0.045);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_2", 0.82);
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance_2", 0.15);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_2", 0.05);
@@ -275,9 +275,9 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI_3", 2.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD_3", 2.0);
 			
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_3", 150.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_3", 2.0);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_3", 2.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_3", 200.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_3", 2.2);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_3", 1.5);
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_3", 30.0);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_3", 0.01);
@@ -309,11 +309,11 @@ public class Config
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_4", 1.5);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_4", 0.01);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_4", 0.01);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_4", 0.101);
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance_4", 0.2);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_4", 0.6);
-			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance_4", 10.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance_4", 20.0);
 			
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MinimumOutput_4", -0.6);
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MaximumOutput_4", 0.6);
@@ -385,7 +385,7 @@ public class Config
 				//AutoRollIn
 					addToVariables("rollerGripper_AutoRollIn_Left", 1.0);
 					addToVariables("rollerGripper_AutoRollIn_Right", 1.0);
-					addToVariables("rollerGripper_AutoRollIn_MaxFinishCounter", 8);
+					addToVariables("rollerGripper_AutoRollIn_MaxFinishCounter", 4);
 					
 				//RollIn
 					addToVariables("rollerGripper_PushContainerSequence_LeftSpeed", 1.0);
@@ -405,7 +405,7 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
 					
 				//WaitForTote
-					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 8);
+					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 4);
 					
 		/*
 		 * Stacker
