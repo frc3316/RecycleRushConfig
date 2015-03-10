@@ -161,8 +161,8 @@ public class Config
 			/*
 			 * Robot A
 			 */
-			addToConstantsA("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 256) * 0.0254);
-			addToConstantsA("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 256) * 0.0254);
+			addToConstantsA("CHASSIS_ENCODER_LEFT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
+			addToConstantsA("CHASSIS_ENCODER_RIGHT_DISTANCE_PER_PULSE", ((6*Math.PI) / 32) * 0.0254);
 			addToConstantsA("CHASSIS_ENCODER_CENTER_DISTANCE_PER_PULSE", ((4*Math.PI) / 32) * 0.0254);
 			
 			/*

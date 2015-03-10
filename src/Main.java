@@ -38,7 +38,6 @@ public class Main
 		transferConfig();
 		getLogList();
 		*/
-		config = new Config();
 		final JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 
@@ -67,6 +66,8 @@ public class Main
 	
 	private static void writeConfig ()
 	{
+		config = new Config();
+		
 		FileOutputStream out;
 		ObjectOutputStream output;
 		
