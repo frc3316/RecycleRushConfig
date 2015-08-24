@@ -403,7 +403,11 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_InvertY", false);
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
-					
+
+					//RollLeft
+						addToVariables("rollerGripper_PushContainerSequence_LeftSpeed", -1.0);
+						addToVariables("rollerGripper_PushContainerSequence_RightSpeed", 1.0);
+						
 				//WaitForTote
 					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 4);
 					
