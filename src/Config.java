@@ -410,6 +410,9 @@ public class Config
 						
 				//WaitForTote
 					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 4);
+				
+				//PushTime
+					addToVariables("rollerGripper_PushContainer_PushTime", 1);
 					
 		/*
 		 * Stacker
