@@ -460,5 +460,11 @@ public class Config
 
 					addToVariablesB("stacker_HeightToteMinimum", 5.5);
 					addToVariablesB("stacker_HeightToteMaximum", 20.0);
+					
+					
+			/*
+			 * Vision Test
+			 */
+					addToVariables("AutonomousCamera_ScoreMinRectangle", 75.0);
 	}
 }
