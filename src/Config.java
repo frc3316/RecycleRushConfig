@@ -158,6 +158,11 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_CENTER_A", 0);
 			addToConstants("CHASSIS_ENCODER_CENTER_B", 1);
 			
+			addToVariables("Chassis_Velocity_ResetVelocity", true);
+			
+			addToVariables("chassis_Velocity_Lowpass", 0);
+			addToVariables("chassis_Velocity_UseLowPass", true);
+			
 			/*
 			 * Robot A
 			 */
