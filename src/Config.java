@@ -466,5 +466,7 @@ public class Config
 			 * Vision Test
 			 */
 					addToVariables("AutonomousCamera_ScoreMinRectangle", 75.0);
+					addToVariables("AutonomousCamera_RatioMin", 1.0);
+					addToVariables("AutonomousCamera_RatioMax", 1.0);
 	}
 }
