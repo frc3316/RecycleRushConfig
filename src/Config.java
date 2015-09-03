@@ -107,11 +107,13 @@ public class Config
 				addToConstants("BUTTON_TOTE_PICKUP", 3);
 				addToConstants("BUTTON_MOVE_STACKER_TO_TOTE", 4);
 				
-				addToConstants("BUTTON_HOLD_CONTAINER", 10);
-				addToConstants("BUTTON_RELEASE_CONTAINER", 9);
+				addToConstants("BUTTON_HOLD_CONTAINER", 7);
+				addToConstants("BUTTON_RELEASE_CONTAINER", 8);
 				
 				addToConstants("BUTTON_OPEN_GRIPPER", 5);
 				addToConstants("BUTTON_CLOSE_GRIPPER", 6);
+
+				
 				
 				/*
 				 * Roller-Gripper
@@ -434,14 +436,18 @@ public class Config
 					
 					addToConstants("STACKER_IR", 0);
 					
-					addToConstants("SWITCH_RATCHET_LEFT", 7);
-					addToConstants("SWITCH_RATCHET_RIGHT", 8);
+					addToConstants("STACKER_SWITCH_RATCHET_LEFT", 7);
+					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
+					addToConstants("STACKER_SWITCH_HEIGHT", 9);
 			/*
 			 * Variables
 			 */
+
+
 				//Subsystem
 					addToVariables("stacker_HeightAverage_Size", 25);
 					addToVariables("stacker_HeightAverage_UpdateRate", 20);
+					addToVariables("stacker_Scale", 1.0);
 					
 					/*
 					 * Robot A
