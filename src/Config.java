@@ -468,5 +468,7 @@ public class Config
 					addToVariables("AutonomousCamera_ScoreMinRectangle", 75.0);
 					addToVariables("AutonomousCamera_RatioMin", 1.0);
 					addToVariables("AutonomousCamera_RatioMax", 1.0);
+					addToVariables("AutonomousCamera_TargetSize", 1.0);
+					addToVariables("AutonomousCamera_ViewAngle", 48.0);
 	}
 }
