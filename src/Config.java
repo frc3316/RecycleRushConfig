@@ -163,6 +163,11 @@ public class Config
 			addToVariables("chassis_Velocity_Lowpass", 0);
 			addToVariables("chassis_Velocity_UseLowPass", true);
 			
+			
+			addToVariables("chassis_Accelaverage_Size", 20);
+			addToVariables("averageUpdateRate", 10);
+			addToVariables("chassis_Accelaverage_useMovingAverage", true);
+			
 			/*
 			 * Robot A
 			 */
