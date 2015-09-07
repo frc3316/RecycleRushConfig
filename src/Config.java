@@ -200,7 +200,8 @@ public class Config
 			//RobotOrientedDrive
 			addToVariables("chassis_RobotOrientedDrive_TurnScale", 1.0);
 			
-			//RobotOrientedDrivePIDRotation
+			//PIDRotation
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_UsePIDRotation", true);
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KP", 5.2);
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KI", 0.0);
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KD", 6.0);
