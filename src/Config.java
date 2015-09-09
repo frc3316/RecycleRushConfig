@@ -335,6 +335,10 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput_4", 0.5);
 			
 			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_4", 1);
+			
+			//xDistance
+			addToVariables("chassis_AutonomousTest_xDistance", 0.15);
+			
 		/*
 		 * Anschluss
 		 */
