@@ -158,14 +158,14 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_CENTER_A", 0);
 			addToConstants("CHASSIS_ENCODER_CENTER_B", 1);
 			
-			addToVariables("Chassis_Velocity_ResetVelocity", true);
+			addToVariables("chassis_Velocity_ResetVelocity", true);
 			
-			addToVariables("chassis_Velocity_Lowpass", 0);
+			addToVariables("chassis_Velocity_Lowpass", 0.0);
 			addToVariables("chassis_Velocity_UseLowPass", true);
 			
 			
 			addToVariables("chassis_Accelaverage_Size", 20);
-			addToVariables("averageUpdateRate", 10);
+			addToVariables("chassis_Accelaverage_UpdateRate", 10);
 			addToVariables("chassis_Accelaverage_useMovingAverage", true);
 			
 			/*
@@ -423,6 +423,8 @@ public class Config
 				
 				//PushTime
 					addToVariables("rollerGripper_PushContainer_PushTime", 1);
+					addToVariables("rollerGripper_RollContainer_LeftSpeed", 1);
+					addToVariables("rollerGripper_RollContainer_RightSpeed", -1);
 					
 		/*
 		 * Stacker
