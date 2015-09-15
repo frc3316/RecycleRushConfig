@@ -143,11 +143,9 @@ public class Config
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT_1", 9);
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT_2", 10);
+				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT_1", 8);
 				
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT_1", 11);
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT_2", 12);
+				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT_1", 9);
 				
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
