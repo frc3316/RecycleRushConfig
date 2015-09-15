@@ -97,7 +97,7 @@ public class Config
 			addToConstants("JOYSTICK_LEFT", 0);
 			addToConstants("JOYSTICK_RIGHT", 1);
 			addToConstants("JOYSTICK_OPERATOR", 2);
-			
+
 			//subsystem
 				/*
 				 * Stacker
@@ -107,11 +107,14 @@ public class Config
 				addToConstants("BUTTON_TOTE_PICKUP", 3);
 				addToConstants("BUTTON_MOVE_STACKER_TO_TOTE", 4);
 				
+				addToConstants("BUTTON_OPEN_GRIPPER", 5);
+				addToConstants("BUTTON_CLOSE_GRIPPER", 6);
+				
 				addToConstants("BUTTON_HOLD_CONTAINER", 7);
 				addToConstants("BUTTON_RELEASE_CONTAINER", 8);
 				
-				addToConstants("BUTTON_OPEN_GRIPPER", 5);
-				addToConstants("BUTTON_CLOSE_GRIPPER", 6);
+				addToConstants("BUTTON_OPEN_BRAKE", 9);
+				addToConstants("BUTTON_CLOSE_BRAKE", 10);		
 
 				
 				
@@ -152,6 +155,8 @@ public class Config
 				
 				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
 				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+				
+				
 				
 		/*
 		 * Chassis
@@ -414,6 +419,9 @@ public class Config
 					
 				//WaitForTote
 					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 4);
+				
+					
+					
 					
 		/*
 		 * Stacker
@@ -422,11 +430,11 @@ public class Config
 			 * Constants
 			 */
 				//Subsystem
-					addToConstants("STACKER_SOLENOID_UPPER_FORWARD", 6);
-					addToConstants("STACKER_SOLENOID_UPPER_REVERSE", 7);
+					addToConstants("STACKER_SOLENOID_HOLDERS_FORWARD", 4);
+					addToConstants("STACKER_SOLENOID_HOLDERS_REVERSE", 5);
 					
-					addToConstants("STACKER_SOLENOID_BOTTOM_FORWARD", 4);
-					addToConstants("STACKER_SOLENOID_BOTTOM_REVERSE", 5);
+					addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 6);
+					addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 7);
 					
 					addToConstants("STACKER_SOLENOID_CONTAINER_FORWARD", 3);
 					addToConstants("STACKER_SOLENOID_CONTAINER_REVERSE", 2);
@@ -439,6 +447,8 @@ public class Config
 					addToConstants("STACKER_SWITCH_RATCHET_LEFT", 7);
 					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
 					addToConstants("STACKER_SWITCH_HEIGHT", 9);
+					
+					addToConstants("stacker_ElevatorSpeed", 0.5);
 			/*
 			 * Variables
 			 */
@@ -449,6 +459,7 @@ public class Config
 					addToVariables("stacker_HeightAverage_UpdateRate", 20);
 					addToVariables("stacker_Scale", 1.0);
 					
+
 					/*
 					 * Robot A
 					 */
@@ -472,5 +483,7 @@ public class Config
 
 					addToVariablesB("stacker_HeightToteMinimum", 5.5);
 					addToVariablesB("stacker_HeightToteMaximum", 20.0);
+
+					
 	}
 }
