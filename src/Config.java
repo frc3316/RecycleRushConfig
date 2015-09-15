@@ -428,8 +428,8 @@ public class Config
 			 * Constants
 			 */
 				//Subsystem
-					addToConstants("STACKER_SOLENOID_HOLDERS_FORWARD", 4);
-					addToConstants("STACKER_SOLENOID_HOLDERS_REVERSE", 5);
+					addToConstants("STACKER_SOLENOID_HOLDER_FORWARD", 4);
+					addToConstants("STACKER_SOLENOID_HOLDER_REVERSE", 5);
 					
 					addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 6);
 					addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 7);
