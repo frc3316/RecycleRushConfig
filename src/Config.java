@@ -461,14 +461,19 @@ public class Config
 					addToVariablesB("stacker_HeightToteMinimum", 5.5);
 					addToVariablesB("stacker_HeightToteMaximum", 20.0);
 					
-					
-			/*
-			 * Vision Test
-			 */
+					/*
+					 * Vision Test
+					 */
+					//Variables
 					addToVariables("AutonomousCamera_ScoreMinRectangle", 75.0);
 					addToVariables("AutonomousCamera_RatioMin", 1.0);
 					addToVariables("AutonomousCamera_RatioMax", 1.0);
 					addToVariables("AutonomousCamera_TargetSize", 1.0);
 					addToVariables("AutonomousCamera_ViewAngle", 48.0);
+					addToVariables("AutonomousCamera_AreaMinimum", 4.0);
+					
+					//Constants
+					addToConstants("AUTONOMOUS_CAMERA_X_IMAGE_RES", 640);
+					addToConstants("AUTONOMOUS_CAMERA_Y_IMAGE_RES", 480);
 	}
 }
