@@ -126,11 +126,6 @@ public class Config
 				addToConstants("BUTTON_ROLL_TURN_CLOCKWISE", 90);
 				addToConstants("BUTTON_ROLL_TURN_COUNTER_CLOCKWISE", 270);
 				
-				/*
-				 * Anschluss
-				 */
-				addToConstants("BUTTON_OPEN_ANSCHLUSS", 8);
-				addToConstants("BUTTON_CLOSE_ANSCHLUSS", 7);
 		/*
 		 * Robot IO
 		 */
@@ -336,20 +331,7 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput_4", 0.5);
 			
 			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_4", 1);
-		/*
-		 * Anschluss
-		 */
-			/*
-			 * Constants
-			 */
-			addToConstants("ANSCHLUSS_DIGITAL_INPUT_CLOSED", 11);
-			addToConstants("ANSCHLUSS_DIGITAL_INPUT_OPENED", 10);
-			
-			/*
-			 * Variables
-			 */
-			addToVariables("anschluss_CloseAnschluss_MotorSpeed", -1.0);
-			addToVariables("anschluss_OpenAnschluss_MotorSpeed", 1.0);
+
 		/*
 		 * Roller Gripper
 		 */
@@ -428,11 +410,11 @@ public class Config
 			 * Constants
 			 */
 				//Subsystem
-					addToConstants("STACKER_SOLENOID_HOLDER_FORWARD", 4);
-					addToConstants("STACKER_SOLENOID_HOLDER_REVERSE", 5);
+					addToConstants("STACKER_SOLENOID_HOLDER_FORWARD", 6);
+					addToConstants("STACKER_SOLENOID_HOLDER_REVERSE", 7);
 					
-					addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 6);
-					addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 7);
+					addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 4);
+					addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 5);
 					
 					addToConstants("STACKER_SOLENOID_CONTAINER_FORWARD", 3);
 					addToConstants("STACKER_SOLENOID_CONTAINER_REVERSE", 2);
@@ -446,7 +428,7 @@ public class Config
 					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
 					addToConstants("STACKER_SWITCH_HEIGHT", 9);
 					
-					addToConstants("stacker_ElevatorSpeed", 0.5);
+					addToConstants("stacker_MoveDown_scale", 0.5);
 			/*
 			 * Variables
 			 */
@@ -455,7 +437,8 @@ public class Config
 				//Subsystem
 					addToVariables("stacker_HeightAverage_Size", 25);
 					addToVariables("stacker_HeightAverage_UpdateRate", 20);
-					addToVariables("stacker_Scale", 1.0);
+					addToVariables("stacker_MoveDown_Scale", 0.3);
+					addToVariables("stacker_MoveUp_Scale", 1.0);
 					
 
 					/*
