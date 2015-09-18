@@ -138,9 +138,9 @@ public class Config
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT_1", 8);
+				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT", 9); //should be 8
 				
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT_1", 9);
+				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT", 8); //should be 9
 				
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
