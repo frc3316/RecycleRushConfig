@@ -144,8 +144,6 @@ public class Config
 				
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
-				addToConstants("ANSCHLUSS_MOTOR_CONTROLLER", 8);
-				
 				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
 				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
 				
