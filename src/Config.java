@@ -427,6 +427,8 @@ public class Config
 					addToConstants("STACKER_SWITCH_HEIGHT", 9);
 					
 					addToConstants("stacker_MoveDown_scale", 0.5);
+					addToConstants("stacker_SetMotors_LowPass", 0.2);
+					
 			/*
 			 * Variables
 			 */
