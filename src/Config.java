@@ -97,7 +97,7 @@ public class Config
 			addToConstants("JOYSTICK_LEFT", 0);
 			addToConstants("JOYSTICK_RIGHT", 1);
 			addToConstants("JOYSTICK_OPERATOR", 2);
-			
+
 			//subsystem
 				/*
 				 * Stacker
@@ -107,11 +107,16 @@ public class Config
 				addToConstants("BUTTON_TOTE_PICKUP", 3);
 				addToConstants("BUTTON_MOVE_STACKER_TO_TOTE", 4);
 				
-				addToConstants("BUTTON_HOLD_CONTAINER", 10);
-				addToConstants("BUTTON_RELEASE_CONTAINER", 9);
-				
 				addToConstants("BUTTON_OPEN_GRIPPER", 5);
 				addToConstants("BUTTON_CLOSE_GRIPPER", 6);
+				
+				addToConstants("BUTTON_HOLD_CONTAINER", 7);
+				addToConstants("BUTTON_RELEASE_CONTAINER", 8);
+				
+				addToConstants("BUTTON_OPEN_BRAKE", 9);
+				addToConstants("BUTTON_CLOSE_BRAKE", 10);		
+
+				
 				
 				/*
 				 * Roller-Gripper
@@ -121,11 +126,6 @@ public class Config
 				addToConstants("BUTTON_ROLL_TURN_CLOCKWISE", 90);
 				addToConstants("BUTTON_ROLL_TURN_COUNTER_CLOCKWISE", 270);
 				
-				/*
-				 * Anschluss
-				 */
-				addToConstants("BUTTON_OPEN_ANSCHLUSS", 8);
-				addToConstants("BUTTON_CLOSE_ANSCHLUSS", 7);
 		/*
 		 * Robot IO
 		 */
@@ -138,12 +138,16 @@ public class Config
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
 				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
 				
-				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
+				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT", 8); 
 				
-				addToConstants("ANSCHLUSS_MOTOR_CONTROLLER", 8);
+				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT", 9);
+				
+				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
 				
 				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
 				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+				
+				
 				
 		/*
 		 * Chassis
@@ -326,20 +330,7 @@ public class Config
 			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput_4", 0.5);
 			
 			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_4", 1);
-		/*
-		 * Anschluss
-		 */
-			/*
-			 * Constants
-			 */
-			addToConstants("ANSCHLUSS_DIGITAL_INPUT_CLOSED", 11);
-			addToConstants("ANSCHLUSS_DIGITAL_INPUT_OPENED", 10);
-			
-			/*
-			 * Variables
-			 */
-			addToVariables("anschluss_CloseAnschluss_MotorSpeed", -1.0);
-			addToVariables("anschluss_OpenAnschluss_MotorSpeed", 1.0);
+
 		/*
 		 * Roller Gripper
 		 */
@@ -407,6 +398,9 @@ public class Config
 					
 				//WaitForTote
 					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 4);
+				
+					
+					
 					
 		/*
 		 * Stacker
@@ -415,11 +409,11 @@ public class Config
 			 * Constants
 			 */
 				//Subsystem
-					addToConstants("STACKER_SOLENOID_UPPER_FORWARD", 6);
-					addToConstants("STACKER_SOLENOID_UPPER_REVERSE", 7);
+					addToConstants("STACKER_SOLENOID_HOLDER_FORWARD", 6);
+					addToConstants("STACKER_SOLENOID_HOLDER_REVERSE", 7);
 					
-					addToConstants("STACKER_SOLENOID_BOTTOM_FORWARD", 4);
-					addToConstants("STACKER_SOLENOID_BOTTOM_REVERSE", 5);
+					addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 4);
+					addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 5);
 					
 					addToConstants("STACKER_SOLENOID_CONTAINER_FORWARD", 3);
 					addToConstants("STACKER_SOLENOID_CONTAINER_REVERSE", 2);
@@ -429,15 +423,25 @@ public class Config
 					
 					addToConstants("STACKER_IR", 0);
 					
-					addToConstants("SWITCH_RATCHET_LEFT", 7);
-					addToConstants("SWITCH_RATCHET_RIGHT", 8);
+					addToConstants("STACKER_SWITCH_RATCHET_LEFT", 7);
+					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
+					addToConstants("STACKER_SWITCH_HEIGHT", 9);
+					
+					addToConstants("stacker_MoveDown_scale", 0.5);
+					addToConstants("stacker_SetMotors_LowPass", 0.2);
+					
 			/*
 			 * Variables
 			 */
+
+
 				//Subsystem
 					addToVariables("stacker_HeightAverage_Size", 25);
 					addToVariables("stacker_HeightAverage_UpdateRate", 20);
+					addToVariables("stacker_MoveDown_Scale", 0.3);
+					addToVariables("stacker_MoveUp_Scale", 1.0);
 					
+
 					/*
 					 * Robot A
 					 */
@@ -461,5 +465,7 @@ public class Config
 
 					addToVariablesB("stacker_HeightToteMinimum", 5.5);
 					addToVariablesB("stacker_HeightToteMaximum", 20.0);
+
+					
 	}
 }

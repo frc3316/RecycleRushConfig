@@ -40,6 +40,7 @@ public class Main
 		*/
 		final JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
+		frame.setBounds(0, 0, 200, 200);
 
 		JButton getlogsButton = new JButton("Transfer Logs");
 		JButton uploadConfigButton = new JButton("Transfer Config");
