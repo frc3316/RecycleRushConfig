@@ -211,16 +211,16 @@ public class Config
 			addToVariables("chassis_RobotOrientedDrive_TurnScale", 1.0);
 			
 			//RobotOrientedDrivePIDRotation
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KP", 0.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KP", 3.2);
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KI", 0.0);
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KD", 0.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_KD", 4.0);
 			
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_AbsoluteTolerance", 5.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_AbsoluteTolerance", 0.0);
 			
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MinimumOutput", -1.0);
 			addToVariables("chassis_RobotOrientedDrivePIDRotation_PIDControllerRotation_MaximumOutput", 1.0);
 			
-			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 180.0);
+			addToVariables("chassis_RobotOrientedDrivePIDRotation_SetpointScale", 360.0);
 			
 			//RobotOrientedNavigation
 			
@@ -479,5 +479,20 @@ public class Config
 
 					addToVariablesB("stacker_HeightToteMinimum", 5.5);
 					addToVariablesB("stacker_HeightToteMaximum", 20.0);
+					
+					/*
+					 * Vision Test
+					 */
+					//Variables
+					addToVariables("AutonomousCamera_ScoreMinRectangle", 75.0);
+					addToVariables("AutonomousCamera_RatioMin", 0.6);
+					addToVariables("AutonomousCamera_RatioMax", 0.8);
+					addToVariables("AutonomousCamera_TargetSize", 2.755);
+					addToVariables("AutonomousCamera_ViewAngle", 48.0);
+					addToVariables("AutonomousCamera_AreaMinimum", 4.0);
+					
+					//Constants
+					addToConstants("AUTONOMOUS_CAMERA_X_IMAGE_RES", 640);
+					addToConstants("AUTONOMOUS_CAMERA_Y_IMAGE_RES", 480);
 	}
 }
