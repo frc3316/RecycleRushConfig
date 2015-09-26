@@ -494,5 +494,11 @@ public class Config
 					//Constants
 					addToConstants("AUTONOMOUS_CAMERA_X_IMAGE_RES", 640);
 					addToConstants("AUTONOMOUS_CAMERA_Y_IMAGE_RES", 480);
+					
+					/*
+					 * Drive to yellow tote
+					 */
+					//Variables
+					addToVariables("chassis_DriveToYellowTote_DefaultSetPoint", 2.5);
 	}
 }
