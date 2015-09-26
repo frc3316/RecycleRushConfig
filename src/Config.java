@@ -430,6 +430,9 @@ public class Config
 					addToConstants("stacker_MoveDown_scale", 0.5);
 					addToConstants("stacker_SetMotors_LowPass", 0.2);
 					
+					//TODO: measure this constant
+					addToConstants("stacker_NumberOfScrews", 150);
+					
 			/*
 			 * Variables
 			 */
@@ -441,7 +444,16 @@ public class Config
 					addToVariables("stacker_MoveDown_Scale", 0.3);
 					addToVariables("stacker_MoveUp_Scale", 1.0);
 					
-
+					addToVariables("stacker_MoveStacker_PIDHeight_KP", 0.0);
+					addToVariables("stacker_MoveStacker_PIDHeight_KI", 0.0);
+					addToVariables("stacker_MoveStacker_PIDHeight_KD", 0.0);
+					
+					addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 2.0);
+					
+					addToVariables("stacker_MoveStackerToFloor_SetPoint", 0.0);
+					addToVariables("stacker_MoveStackerToStep_SetPoint", 0.0);
+					addToVariables("stacker_MoveStackerToTote_SetPoint", 0.0);
+					
 					/*
 					 * Robot A
 					 */
