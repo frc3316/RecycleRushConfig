@@ -113,19 +113,12 @@ public class Config
 				addToConstants("BUTTON_HOLD_CONTAINER", 7);
 				addToConstants("BUTTON_RELEASE_CONTAINER", 8);
 				
-				addToConstants("BUTTON_OPEN_BRAKE", 9);
-				addToConstants("BUTTON_CLOSE_BRAKE", 10);		
-
+				addToConstants("BUTTON_OPEN_BRAKE", 0);
+				addToConstants("BUTTON_CLOSE_BRAKE", 180);
 				
-				
-				/*
-				 * Roller-Gripper
-				 */
-				addToConstants("BUTTON_ROLL_IN", 180);
-				addToConstants("BUTTON_ROLL_OUT", 0);
-				addToConstants("BUTTON_ROLL_TURN_CLOCKWISE", 90);
-				addToConstants("BUTTON_ROLL_TURN_COUNTER_CLOCKWISE", 270);
-				
+				addToConstants("BUTTON_WIGGLE_WIGGLE", 2);
+				addToConstants("BUTTON_DISABLE_NAVX", 6);
+				addToConstants("BUTTON_ENABLE_NAVX", 7);
 		/*
 		 * Robot IO
 		 */
