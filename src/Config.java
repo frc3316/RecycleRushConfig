@@ -451,33 +451,7 @@ public class Config
 					addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 2.0);
 					
 					addToVariables("stacker_MoveStackerToFloor_SetPoint", 0.0);
-					addToVariables("stacker_MoveStackerToStep_SetPoint", 0.0);
-					addToVariables("stacker_MoveStackerToTote_SetPoint", 0.0);
-					
-					/*
-					 * Robot A
-					 */
-					addToVariablesA("stacker_HeightFloorMinimum", 0.0);
-					addToVariablesA("stacker_HeightFloorMaximum", 0.6);
-					
-					addToVariablesA("stacker_HeightStepMinimum", 2.0);
-					addToVariablesA("stacker_HeightStepMaximum", 2.8);
-
-					addToVariablesA("stacker_HeightToteMinimum", 5.0);
-					addToVariablesA("stacker_HeightToteMaximum", 20.0);
-					
-					/*
-					 * Robot B
-					 */
-					addToVariablesB("stacker_HeightFloorMinimum", 0.0);
-					addToVariablesB("stacker_HeightFloorMaximum", 0.63);
-					
-					addToVariablesB("stacker_HeightStepMinimum", 3.75);
-					addToVariablesB("stacker_HeightStepMaximum", 4.2);
-
-					addToVariablesB("stacker_HeightToteMinimum", 5.5);
-					addToVariablesB("stacker_HeightToteMaximum", 20.0);
-
-					
+					addToVariables("stacker_MoveStackerToStep_SetPoint", 120.0);
+					addToVariables("stacker_MoveStackerToTote_SetPoint", 150.0);
 	}
 }
