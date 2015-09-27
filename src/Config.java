@@ -445,10 +445,10 @@ public class Config
 					addToVariables("stacker_MoveStacker_PIDHeight_KI", 0.0);
 					addToVariables("stacker_MoveStacker_PIDHeight_KD", 0.0);
 					
-					addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 2.0);
+					addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 0.0);
 					
 					addToVariables("stacker_MoveStackerToFloor_SetPoint", 0.0);
-					addToVariables("stacker_MoveStackerToStep_SetPoint", 120.0);
-					addToVariables("stacker_MoveStackerToTote_SetPoint", 150.0);
+					addToVariables("stacker_MoveStackerToStep_SetPoint", 22.0);
+					addToVariables("stacker_MoveStackerToTote_SetPoint", 28.0);
 	}
 }
