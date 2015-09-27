@@ -426,6 +426,7 @@ public class Config
 					addToConstants("STACKER_SWITCH_RATCHET_LEFT", 7);
 					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
 					addToConstants("STACKER_SWITCH_HEIGHT", 9);
+					addToConstants("STACKER_SWITCH_SECURE", 10);
 					
 					addToConstants("stacker_MoveDown_scale", 0.5);
 					addToConstants("stacker_SetMotors_LowPass", 0.2);
