@@ -430,9 +430,6 @@ public class Config
 					addToConstants("stacker_MoveDown_scale", 0.5);
 					addToConstants("stacker_SetMotors_LowPass", 0.2);
 					
-					//TODO: measure this constant
-					addToConstants("stacker_NumberOfScrews", 150);
-					
 			/*
 			 * Variables
 			 */
