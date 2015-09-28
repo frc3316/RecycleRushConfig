@@ -430,10 +430,10 @@ public class Config {
 		addToVariables("stacker_MoveUp_Scale", 1.0);
 
 		addToVariables("stacker_MoveStacker_PIDHeight_KP", 30.0);
-		addToVariables("stacker_MoveStacker_PIDHeight_KI", 1.7);
+		addToVariables("stacker_MoveStacker_PIDHeight_KI", 1.9);
 		addToVariables("stacker_MoveStacker_PIDHeight_KD", 60.0);
 
-		addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 1.1);
+		addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 2.1);
 
 		addToVariables("stacker_MoveStackerToFloor_SetPoint", 0.0);
 		addToVariables("stacker_MoveStackerToStep_SetPoint", 17.0);
