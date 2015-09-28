@@ -334,6 +334,34 @@ public class Config
 			
 			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_4", 1);
 
+			
+			//Set 5 - For driving to yellow tote
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KP_5", 300.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KI_5", 2.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_KD_5", 2.0);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KP_5", 200.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KI_5", 2.2);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_KD_5", 1.5);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KP_5", 30.0);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KI_5", 0.01);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_KD_5", 0.015);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_AbsoluteTolerance_5", 0.15);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_AbsoluteTolerance_5", 0.05);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_AbsoluteTolerance_5", 1.0);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MinimumOutput_5", -0.6);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerX_MaximumOutput_5", 0.6);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MinimumOutput_5", -0.6);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerY_MaximumOutput_5", 0.6);
+			
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MinimumOutput_5", -0.5);
+			addToVariables("chassis_RobotOrientedNavigation_PIDControllerHeading_MaximumOutput_5", 0.5);
+			
+			addToVariables("chassis_RobotOrientedNavigation_MaxFinishCounter_5", 5);
 		/*
 		 * Roller Gripper
 		 */
