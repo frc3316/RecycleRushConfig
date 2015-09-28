@@ -85,12 +85,13 @@ public class Config {
 				addToConstants("BUTTON_MOVE_STACKER_TO_STEP", 2);
 				addToConstants("BUTTON_TOTE_PICKUP", 3);
 				addToConstants("BUTTON_MOVE_STACKER_TO_TOTE", 4);
+				addToConstants("BUTTON_DROPOFF", 8);
 				
 				addToConstants("BUTTON_OPEN_GRIPPER", 5);
 				addToConstants("BUTTON_CLOSE_GRIPPER", 6);
 				
-				addToConstants("BUTTON_HOLD_CONTAINER", 7);
-				addToConstants("BUTTON_RELEASE_CONTAINER", 8);
+				addToConstants("BUTTON_HOLD_CONTAINER", 10);
+				addToConstants("BUTTON_RELEASE_CONTAINER", 9);
 				
 				addToConstants("BUTTON_OPEN_BRAKE", 0);
 				addToConstants("BUTTON_CLOSE_BRAKE", 180);
