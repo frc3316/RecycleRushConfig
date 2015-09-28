@@ -155,6 +155,16 @@ public class Config
 			addToConstants("CHASSIS_ENCODER_CENTER_A", 0);
 			addToConstants("CHASSIS_ENCODER_CENTER_B", 1);
 			
+			addToVariables("chassis_Velocity_ResetVelocity", true);
+			
+			addToVariables("chassis_Velocity_Lowpass", 0.0);
+			addToVariables("chassis_Velocity_UseLowPass", true);
+			
+			
+			addToVariables("chassis_Accelaverage_Size", 20);
+			addToVariables("chassis_Accelaverage_UpdateRate", 10);
+			addToVariables("chassis_Accelaverage_useMovingAverage", true);
+			
 			/*
 			 * Robot A
 			 */
@@ -343,29 +353,6 @@ public class Config
 					
 					addToVariables("rollerGripper_GPDistanceAverage_Size", 20);
 					addToVariables("rollerGripper_GPDistanceAverage_UpdateRate", 20);
-					/*
-					 * Robot A
-					 */
-					addToVariablesA("rollerGripper_ToteDistanceMinimum", 0.32);
-					addToVariablesA("rollerGripper_ToteDistanceMaximum", 0.365);
-					
-					addToVariablesA("rollerGripper_ContainerDistanceMinimum", 0.38);
-					addToVariablesA("rollerGripper_ContainerDistanceMaximum", 0.42);
-					
-					addToVariablesA("rollerGripper_SomethingDistanceThreshold", 1.0);
-					addToVariablesA("rollerGripper_UnsureDistanceThreshold", 1.7);
-					
-					/*
-					 * Robot B
-					 */
-					addToVariablesB("rollerGripper_ToteDistanceMinimum", 0.0);
-					addToVariablesB("rollerGripper_ToteDistanceMaximum", 0.33);
-					
-					addToVariablesB("rollerGripper_ContainerDistanceMinimum", 0.35);
-					addToVariablesB("rollerGripper_ContainerDistanceMaximum", 0.42);
-					
-					addToVariablesB("rollerGripper_SomethingDistanceThreshold", 1.0);
-					addToVariablesB("rollerGripper_UnsureDistanceThreshold", 1.7);
 					
 				//AutoRollIn
 					addToVariables("rollerGripper_AutoRollIn_Left", 1.0);
@@ -388,12 +375,18 @@ public class Config
 					addToVariables("rollerGripper_RollJoystick_InvertY", false);
 					
 					addToVariables("rollerGripper_RollJoystick_LowPass", 0.15);
-					
+
+				//RollLeft
+					addToVariables("rollerGripper_PushContainerSequence_LeftSpeed_MoveLeft", -1.0);
+					addToVariables("rollerGripper_PushContainerSequence_RightSpeed_MoveLeft", 1.0);
+						
 				//WaitForTote
 					addToVariables("rollerGripper_WaitForTote_MaxFinishCounter", 4);
 				
-					
-					
+				//PushTime
+					addToVariables("rollerGripper_PushContainer_PushTime", 1);
+					addToVariables("rollerGripper_RollContainer_LeftSpeed", 1);
+					addToVariables("rollerGripper_RollContainer_RightSpeed", -1);
 					
 		/*
 		 * Stacker
@@ -420,45 +413,31 @@ public class Config
 					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
 					addToConstants("STACKER_SWITCH_HEIGHT", 9);
 					
-					addToConstants("stacker_MoveDown_scale", 0.5);
 					addToConstants("stacker_SetMotors_LowPass", 0.2);
 					
 			/*
 			 * Variables
 			 */
-
-
-				//Subsystem
-					addToVariables("stacker_HeightAverage_Size", 25);
-					addToVariables("stacker_HeightAverage_UpdateRate", 20);
-					addToVariables("stacker_MoveDown_Scale", 0.3);
-					addToVariables("stacker_MoveUp_Scale", 1.0);
-					
-
-					/*
-					 * Robot A
-					 */
-					addToVariablesA("stacker_HeightFloorMinimum", 0.0);
-					addToVariablesA("stacker_HeightFloorMaximum", 0.6);
-					
-					addToVariablesA("stacker_HeightStepMinimum", 2.0);
-					addToVariablesA("stacker_HeightStepMaximum", 2.8);
-
-					addToVariablesA("stacker_HeightToteMinimum", 5.0);
-					addToVariablesA("stacker_HeightToteMaximum", 20.0);
 					
 					/*
-					 * Robot B
+					 * Vision Test
 					 */
-					addToVariablesB("stacker_HeightFloorMinimum", 0.0);
-					addToVariablesB("stacker_HeightFloorMaximum", 0.63);
+					//Variables
+					addToVariables("AutonomousCamera_ScoreMinRectangle", 75.0);
+					addToVariables("AutonomousCamera_RatioMin", 0.6);
+					addToVariables("AutonomousCamera_RatioMax", 0.8);
+					addToVariables("AutonomousCamera_TargetSize", 2.755);
+					addToVariables("AutonomousCamera_ViewAngle", 48.0);
+					addToVariables("AutonomousCamera_AreaMinimum", 4.0);
 					
-					addToVariablesB("stacker_HeightStepMinimum", 3.75);
-					addToVariablesB("stacker_HeightStepMaximum", 4.2);
-
-					addToVariablesB("stacker_HeightToteMinimum", 5.5);
-					addToVariablesB("stacker_HeightToteMaximum", 20.0);
-
+					//Constants
+					addToConstants("AUTONOMOUS_CAMERA_X_IMAGE_RES", 640);
+					addToConstants("AUTONOMOUS_CAMERA_Y_IMAGE_RES", 480);
 					
+					/*
+					 * Drive to yellow tote
+					 */
+					//Variables
+					addToVariables("chassis_DriveToYellowTote_DefaultSetPoint", 2.5);
 	}
 }
