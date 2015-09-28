@@ -1,93 +1,72 @@
 import java.util.Hashtable;
 
-public class Config 
-{	
-	public Hashtable <String, Object> variablesB;
-	public Hashtable <String, Object> constantsB;
-	
-	public Hashtable <String, Object> variablesA;
-	public Hashtable <String, Object> constantsA;
-	
-	public Config ()
-	{
-		variablesB = new Hashtable <String, Object>();
-		constantsB = new Hashtable <String, Object>();
-		
-		variablesA = new Hashtable <String, Object>();
-		constantsA = new Hashtable <String, Object>();
-		
+public class Config {
+	public Hashtable<String, Object> variablesB;
+	public Hashtable<String, Object> constantsB;
+
+	public Hashtable<String, Object> variablesA;
+	public Hashtable<String, Object> constantsA;
+
+	public Config() {
+		variablesB = new Hashtable<String, Object>();
+		constantsB = new Hashtable<String, Object>();
+
+		variablesA = new Hashtable<String, Object>();
+		constantsA = new Hashtable<String, Object>();
+
 		initConfig();
 	}
-	
-	private void addToConstantsA (String key, Object value)
-	{
-		if (constantsA.containsKey(key))
-		{
+
+	private void addToConstantsA(String key, Object value) {
+		if (constantsA.containsKey(key)) {
 			constantsA.replace(key, value);
-		}
-		else
-		{
+		} else {
 			constantsA.put(key, value);
 		}
 	}
-	
-	private void addToVariablesA (String key, Object value)
-	{
-		if (variablesA.containsKey(key))
-		{
+
+	private void addToVariablesA(String key, Object value) {
+		if (variablesA.containsKey(key)) {
 			variablesA.replace(key, value);
-		}
-		else
-		{
+		} else {
 			variablesA.put(key, value);
 		}
 	}
-	
-	private void addToConstantsB (String key, Object value)
-	{
-		if (constantsB.containsKey(key))
-		{
+
+	private void addToConstantsB(String key, Object value) {
+		if (constantsB.containsKey(key)) {
 			constantsB.replace(key, value);
-		}
-		else
-		{
+		} else {
 			constantsB.put(key, value);
 		}
 	}
-	
-	private void addToVariablesB (String key, Object value)
-	{
-		if (variablesB.containsKey(key))
-		{
+
+	private void addToVariablesB(String key, Object value) {
+		if (variablesB.containsKey(key)) {
 			variablesB.replace(key, value);
-		}
-		else
-		{
+		} else {
 			variablesB.put(key, value);
 		}
 	}
-	
-	private void addToConstants (String key, Object value)
-	{
+
+	private void addToConstants(String key, Object value) {
 		addToConstantsA(key, value);
 		addToConstantsB(key, value);
 	}
-	
-	private void addToVariables (String key, Object value)
-	{
+
+	private void addToVariables(String key, Object value) {
 		addToVariablesA(key, value);
 		addToVariablesB(key, value);
 	}
-	
+
 	/*
-	 * NOTE: constants and variables that are common to both robot A and robot B should
-	 * be added with addToConstants() or addToVariables()
+	 * NOTE: constants and variables that are common to both robot A and robot B
+	 * should be added with addToConstants() or addToVariables()
 	 * 
-	 * Specify the which table to add the constant or variable to only if there is a
-	 * difference between the two robots
+	 * Specify the which table to add the constant or variable to only if there
+	 * is a difference between the two robots
 	 */
-	private void initConfig ()
-	{
+	private void initConfig() {
 		/*
 		 * Human IO
 		 */
@@ -122,26 +101,24 @@ public class Config
 		/*
 		 * Robot IO
 		 */
-			/*
-			 * Motor Controllers
-			 */
-				addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
-				addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
-				
-				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
-				addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
-				
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT", 8); 
-				
-				addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT", 9);
-				
-				addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
-				
-				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
-				addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
-				
-				
-				
+		/*
+		 * Motor Controllers
+		 */
+		addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_1", 5);
+		addToConstants("CHASSIS_MOTOR_CONTROLLER_LEFT_2", 6);
+
+		addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_1", 1);
+		addToConstants("CHASSIS_MOTOR_CONTROLLER_RIGHT_2", 2);
+
+		addToConstants("ELEVATOR_MOTOR_CONTROLLER_LEFT", 8);
+
+		addToConstants("ELEVATOR_MOTOR_CONTROLLER_RIGHT", 9);
+
+		addToConstants("CHASSIS_MOTOR_CONTROLLER_CENTER", 4);
+
+		addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_LEFT", 7);
+		addToConstants("ROLLER_GRIPPER_MOTOR_CONTROLLER_RIGHT", 3);
+
 		/*
 		 * Chassis
 		 */
@@ -337,7 +314,6 @@ public class Config
 		/*
 		 * Roller Gripper
 		 */
-			
 			/*
 			 * Constants
 			 */
@@ -388,33 +364,6 @@ public class Config
 					addToVariables("rollerGripper_RollContainer_LeftSpeed", 1);
 					addToVariables("rollerGripper_RollContainer_RightSpeed", -1);
 					
-		/*
-		 * Stacker
-		 */
-			/*
-			 * Constants
-			 */
-				//Subsystem
-					addToConstants("STACKER_SOLENOID_HOLDER_FORWARD", 6);
-					addToConstants("STACKER_SOLENOID_HOLDER_REVERSE", 7);
-					
-					addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 4);
-					addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 5);
-					
-					addToConstants("STACKER_SOLENOID_CONTAINER_FORWARD", 3);
-					addToConstants("STACKER_SOLENOID_CONTAINER_REVERSE", 2);
-					
-					addToConstants("STACKER_SOLENOID_GRIPPER_FORWARD", 0);
-					addToConstants("STACKER_SOLENOID_GRIPPER_REVERSE", 1);
-					
-					addToConstants("STACKER_IR", 0);
-					
-					addToConstants("STACKER_SWITCH_RATCHET_LEFT", 7);
-					addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
-					addToConstants("STACKER_SWITCH_HEIGHT", 9);
-					
-					addToConstants("stacker_SetMotors_LowPass", 0.2);
-					
 			/*
 			 * Variables
 			 */
@@ -440,5 +389,53 @@ public class Config
 					 */
 					//Variables
 					addToVariables("chassis_DriveToYellowTote_DefaultSetPoint", 2.5);
+		/*
+		 * Stacker
+		 */
+		/*
+		 * Constants
+		 */
+		// Subsystem
+		addToConstants("STACKER_SOLENOID_HOLDER_FORWARD", 6);
+		addToConstants("STACKER_SOLENOID_HOLDER_REVERSE", 7);
+
+		addToConstants("STACKER_SOLENOID_BRAKE_FORWARD", 4);
+		addToConstants("STACKER_SOLENOID_BRAKE_REVERSE", 5);
+
+		addToConstants("STACKER_SOLENOID_CONTAINER_FORWARD", 2);
+		addToConstants("STACKER_SOLENOID_CONTAINER_REVERSE", 3);
+
+		addToConstants("STACKER_SOLENOID_GRIPPER_FORWARD", 0);
+		addToConstants("STACKER_SOLENOID_GRIPPER_REVERSE", 1);
+
+		addToConstants("STACKER_IR", 0);
+
+		addToConstants("STACKER_SWITCH_RATCHET_LEFT", 7);
+		addToConstants("STACKER_SWITCH_RATCHET_RIGHT", 8);
+		addToConstants("STACKER_SWITCH_HEIGHT", 9);
+		addToConstants("STACKER_SWITCH_SECURE", 10);
+
+		addToConstants("stacker_MoveDown_scale", 0.5);
+		addToConstants("stacker_SetMotors_LowPass", 0.1);
+
+		/*
+		 * Variables
+		 */
+
+		// Subsystem
+		addToVariables("stacker_HeightAverage_Size", 25);
+		addToVariables("stacker_HeightAverage_UpdateRate", 20);
+		addToVariables("stacker_MoveDown_Scale", 0.3);
+		addToVariables("stacker_MoveUp_Scale", 1.0);
+
+		addToVariables("stacker_MoveStacker_PIDHeight_KP", 30.0);
+		addToVariables("stacker_MoveStacker_PIDHeight_KI", 1.7);
+		addToVariables("stacker_MoveStacker_PIDHeight_KD", 60.0);
+
+		addToVariables("stacker_MoveStacker_PIDHeight_AbsoluteTolerance", 1.1);
+
+		addToVariables("stacker_MoveStackerToFloor_SetPoint", 0.0);
+		addToVariables("stacker_MoveStackerToStep_SetPoint", 17.0);
+		addToVariables("stacker_MoveStackerToTote_SetPoint", 27.0);
 	}
 }

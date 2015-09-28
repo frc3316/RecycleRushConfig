@@ -7,7 +7,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 import java.util.Vector;
@@ -21,7 +20,6 @@ import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import com.jcraft.jsch.SftpException;
 
 public class Main 
 {
